@@ -1,0 +1,245 @@
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+
+Copyright (c) 2026 POK-RC Team
+
+Project: POKRION High-Speed Micro Quadcopter Platform
+
+
+1. Copyright and Ownership
+
+All original designs, structural concepts, model files, documentation,
+software configurations, engineering drawings, and related materials
+contained in this repository are the intellectual property of the
+POK-RC Team.
+
+Primary Author:
+Yao Siqi
+
+Contributors:
+Guo Jiyuan
+Zhang Wei
+
+Unless otherwise stated, all content contained in this repository
+is considered an original work of the POK-RC Team and is protected
+under applicable copyright laws.
+
+
+2. License Grant
+
+This project is released under the Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License
+(CC BY-NC-SA 4.0).
+
+You may obtain a copy of the full license text at:
+
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+
+3. Permissions
+
+Subject to the conditions of this license, you are granted the
+following rights:
+
+Share
+
+You may copy, download, and redistribute the materials contained
+in this repository in any medium or format.
+
+Adapt
+
+You may remix, transform, modify, or build upon the materials
+for the purposes of research, education, learning, and personal
+experimentation.
+
+Manufacture
+
+You may manufacture physical devices based on the design files
+included in this repository strictly for personal and
+non-commercial purposes.
+
+
+4. Attribution Requirement
+
+Any use, redistribution, modification, or derivative work based
+on this project must provide appropriate credit to the original
+author and the POK-RC Team.
+
+Attribution must include at minimum:
+
+• reference to the POKRION project  
+• identification of the POK-RC Team as the original developer  
+• indication of any modifications made  
+
+Example attribution statement:
+
+"Based on the POKRION project developed by the POK-RC Team."
+
+Failure to provide proper attribution constitutes a violation
+of this license.
+
+
+5. NonCommercial Restriction
+
+Commercial use of this project or any derivative works is
+strictly prohibited without explicit written authorization
+from the copyright holder.
+
+Commercial use includes, but is not limited to:
+
+• selling products manufactured using the designs
+• selling drone kits based on the project
+• commercial manufacturing or mass production
+• commercial promotion or advertising using the design
+• paid services involving the design
+• selling modified versions of the design
+• selling digital design files derived from this project
+
+Organizations or individuals seeking commercial rights must
+obtain a separate commercial license from the copyright holder.
+
+
+6. ShareAlike Requirement
+
+If you remix, modify, or build upon this project, you must
+distribute your derivative work under the same
+CC BY-NC-SA 4.0 license.
+
+You may not apply additional legal or technical restrictions
+that prevent others from exercising the rights granted under
+this license.
+
+
+7. Scope of Open Source Materials
+
+The following materials included in this repository are
+considered part of the open-source release:
+
+• airframe structural design
+• aerodynamic shell and fairing STL models
+• open-source version of the two-blade propeller
+• structural documentation included in this repository
+
+
+8. Materials Not Included in the Open Source Release
+
+The following items are NOT considered part of the open-source
+release and are not licensed under this license unless
+explicitly stated:
+
+• commercial propeller versions (including 3–7 blade variants)
+• specialized launch equipment or cooling stands
+• proprietary engineering data not included in this repository
+• unpublished performance optimization parameters
+• designs explicitly marked as proprietary or commercial
+
+
+9. Usage Restrictions
+
+This project and any derivative works must NOT be used for:
+
+• military applications
+• weapon systems
+• armed drones
+• combat or tactical operations
+• development of weaponized aerial platforms
+
+
+10. Safety Notice
+
+This repository describes an experimental high-speed UAV platform.
+
+Manufacturing, assembling, testing, or operating high-performance
+drones may involve significant risks, including but not limited to:
+
+• personal injury
+• property damage
+• equipment failure
+• regulatory violations
+• legal liability
+
+Users of this project are solely responsible for ensuring that
+their activities comply with all applicable laws and regulations
+within their jurisdiction.
+
+
+11. Assumption of Risk
+
+Any person who manufactures, assembles, modifies, tests, or
+operates devices based on the materials contained in this
+repository does so entirely at their own risk.
+
+The authors and contributors assume no responsibility for
+any consequences resulting from the use of this project.
+
+
+12. No Warranty
+
+This project is provided "as is", without warranty of any kind,
+express or implied.
+
+The authors and contributors make no guarantees regarding:
+
+• safety
+• reliability
+• performance
+• regulatory compliance
+• suitability for any particular purpose
+
+
+13. Limitation of Liability
+
+Under no circumstances shall the authors, contributors,
+or copyright holders be liable for any damages arising from
+the use of this project.
+
+This includes, but is not limited to:
+
+• personal injury
+• property damage
+• financial loss
+• equipment damage
+• regulatory penalties
+• legal consequences
+
+
+14. Commercial Licensing
+
+The copyright holder reserves the right to grant commercial
+licenses to individuals or organizations.
+
+Commercial rights are NOT granted under this open license.
+
+Any commercial use requires explicit written permission from
+the copyright holder.
+
+
+15. Patent Rights
+
+This license does not grant any patent rights that may exist
+in relation to the technologies described in this project.
+
+The authors reserve the right to pursue patent protection
+for any technical aspects of this project.
+
+
+16. Acknowledgment
+
+Certain early design inspirations were derived from open
+materials shared by Sunny (PROWESS V1.2).
+
+The POK-RC Team independently redesigned and significantly
+modified the structure and engineering implementation.
+
+
+17. Governing Principle
+
+If any provision of this document is found to be unenforceable
+under applicable law, the remaining provisions shall remain
+in effect.
+
+
+18. License Reference
+
+For the complete legal license text, please refer to:
+
+https://creativecommons.org/licenses/by-nc-sa/4.0/
