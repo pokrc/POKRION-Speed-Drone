@@ -11,6 +11,14 @@ This repository is intended to make the design easier to inspect, reproduce, dis
 
 > **Current status:** active experimental development. Dimensions, materials, propellers, electronics, and flight-control settings may change between revisions. Always inspect the files and configuration before manufacturing or flight testing.
 
+## Start here
+
+- **Understand the platform:** read the [reference hardware](#reference-hardware-configuration), [repository map](#repository-map), and [build workflow](#build-workflow).
+- **Inspect printable parts:** open the [`3d_printed_parts/`](3d_printed_parts/) directory and compare the STL/3MF revision with your intended printer and material.
+- **Review the flight stack:** read [`betaflight_config.txt`](betaflight_config.txt) as a reference only, then make your own backup with `diff all` before changing a controller.
+- **Analyze a flight:** use the companion [Tune Betaflight PID from Blackbox Logs](https://github.com/pokrc/tune-betaflight-pid) project with a `.bbl` log.
+- **Join the project:** report a reproducible result in [Issues](https://github.com/pokrc/POKRION-Speed-Drone/issues) or propose a documented change in a pull request.
+
 ## Why POKRION
 
 - **Small airframe, serious test discipline.** The platform explores high-speed performance in a compact micro-quadcopter format.
