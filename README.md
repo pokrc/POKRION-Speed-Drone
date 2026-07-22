@@ -1,126 +1,125 @@
 # POKRION — High-Speed Micro Quadcopter Platform
 
-POKRION is an experimental high-speed micro quadcopter platform developed by the POK-RC team.
+[![GitHub stars](https://img.shields.io/github/stars/pokrc/POKRION-Speed-Drone?style=social)](https://github.com/pokrc/POKRION-Speed-Drone/stargazers)
+[![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue)](LICENSE.txt)
+[![CAD and manufacturing files](https://img.shields.io/badge/CAD-STL%20%2B%203MF-orange)](3d_printed_parts/)
+[![Flight stack](https://img.shields.io/badge/flight%20stack-Betaflight%204.5.x-brightgreen)](https://betaflight.com/)
 
-The project focuses on extreme UAV performance, lightweight structural design, and aerodynamic optimization.  
-It is released for research, learning, and personal experimentation.
+**POKRION** is an experimental, high-speed micro quadcopter platform developed by the POK-RC team. It combines lightweight airframe design, aerodynamic fairings, high-power micro motors, digital video, and Blackbox-driven flight-test iteration.
 
-**Team Members**
+This repository is intended to make the design easier to inspect, reproduce, discuss, and improve. It is an engineering reference—not a certified aircraft, a universal build recipe, or a guarantee of speed, flight time, or structural safety.
 
-- Yao Siqi  
-- Guo Jiyuan  
+> **Current status:** active experimental development. Dimensions, materials, propellers, electronics, and flight-control settings may change between revisions. Always inspect the files and configuration before manufacturing or flight testing.
+
+## Why POKRION
+
+- **Small airframe, serious test discipline.** The platform explores high-speed performance in a compact micro-quadcopter format.
+- **Aerodynamics are part of the system.** Shells, fairings, motor flow, cooling, antenna placement, and cable routing are treated as flight-performance variables.
+- **Manufacturing is documented.** The repository includes printable STL/3MF assets plus additional frame and motor-mount references.
+- **Flight decisions are evidence-based.** Blackbox logs, motor temperature, current, vibration, and controlled A/B tests are preferred over guesswork.
+- **Open engineering discussion.** Builders can report a revision, test condition, result, and failure mode without needing to reverse-engineer the whole project first.
+
+## Reference hardware configuration
+
+The following configuration reflects a representative test setup. It is not a mandatory bill of materials and should not be copied without checking electrical, mechanical, and thermal compatibility.
+
+| Subsystem | Reference configuration |
+| --- | --- |
+| Flight controller | SpeedyBee F405 AIO V2, Betaflight 4.5.x |
+| Motors | AMAX 1507, 3000KV class |
+| Battery | 6S 650 mAh LiPo, approximately 95C class |
+| Video | DJI O4 Air Unit |
+| Navigation | BZ-121 GPS reference hardware |
+| Airframe | Lightweight printed shells/fairings plus frame and motor-mount references |
+| Tuning workflow | Betaflight Blackbox, RPM-filter verification, staged PID/filter tests |
+
+The actual safe operating point depends on motor winding, ESC limits, propeller load, battery condition, cooling, airframe mass, and local regulations.
+
+## Repository map
+
+| Path | What it contains | Notes |
+| --- | --- | --- |
+| [`3d_printed_parts/`](3d_printed_parts/) | Canopy, upper/lower shells, motor fairing, propeller box, and 3MF print assets | Review the file revision and print profile before use |
+| [`carbon_fiber_frame/`](carbon_fiber_frame/) | Battery plate, frame mount, and main-frame references | Treat these as revision-specific design references |
+| [`cnc_motor_mount/`](cnc_motor_mount/) | CNC motor-mount reference file | Confirm units, tolerances, and hole pattern in CAD before machining |
+| [`propellers/`](propellers/) | CW/CCW propeller models marked for the open release | Balance and inspect every propeller before flight |
+| [`betaflight_config.txt`](betaflight_config.txt) | Reference flight-controller configuration | Do not paste blindly; audit every setting |
+| [`guinness_rules_en.pdf`](guinness_rules_en.pdf) | English rules/reference document included with the project | Verify the current official rules independently |
+| [`guinness_rules_cn.pdf`](guinness_rules_cn.pdf) | Chinese rules/reference document | Provided for reference only |
+| [`LICENSE.txt`](LICENSE.txt) | Project license and attribution requirements | CC BY-NC-SA 4.0; exclusions are stated in the README and license |
+
+## Open-source scope
+
+The repository currently publishes selected airframe and aerodynamic design material, including printable structural parts, fairings, and the open-release two-blade propeller models. Some POKRION propeller variants, launch-stand files, test fixtures, and other unreleased work are intentionally excluded.
+
+A file being visible in the repository does not automatically mean that it is approved for commercial manufacture or unrestricted redistribution. Read [`LICENSE.txt`](LICENSE.txt) before copying, modifying, manufacturing, or publishing derivatives.
+
+## Build workflow
+
+1. **Choose a revision.** Record the commit, file names, material, print process, and hardware revision before starting.
+2. **Inspect the geometry.** Check wall thickness, clearances, motor-hole pattern, propeller clearance, cooling paths, antenna clearance, and battery retention.
+3. **Validate the manufacturing process.** Confirm printer calibration, material drying, layer adhesion, anisotropy, support strategy, and post-processing.
+4. **Check the power system.** Verify motor/propeller load, ESC current capability, battery voltage, connector quality, polarity, solder joints, and insulation.
+5. **Dry-fit before power.** Confirm that no printed part, fastener, cable, or fairing can contact a motor bell or propeller arc.
+6. **Bench test without propellers.** Verify motor order/direction, receiver failsafe, arming logic, current-sensor sanity, video, GPS, and Blackbox logging.
+7. **Perform a short controlled flight test.** Use a legal, clear area and a known-good battery and propeller set. Land early if temperature, sound, vibration, or control response is abnormal.
+8. **Record evidence.** Save the configuration backup, flight log, battery state, weather, test duration, peak current, motor temperature, and any incident.
+
+## Flight-data and PID workflow
+
+Do not tune the final aircraft from a propeller-less ARM test. A motor page is an open-loop check; it does not reproduce the closed-loop gyro/PID/motor interaction that occurs in flight.
+
+For a structured Blackbox workflow, see the companion project:
+
+**[Tune Betaflight PID from Blackbox Logs](https://github.com/pokrc/tune-betaflight-pid)**
+
+It analyzes `.bbl` logs, checks quality gates, compares matched flight windows, verifies RPM evidence, and produces a staged CLI candidate. Use it together with a saved `diff all` backup and short test flights. A generated CLI is a reviewable candidate, not permission to skip mechanical inspection or temperature checks.
+
+## Safety and responsible use
+
+High-energy LiPo batteries, rotating propellers, high-current wiring, hot motors, and high-speed flight can cause serious injury, fire, or property damage. Users are responsible for:
+
+- removing propellers during all bench and configuration work;
+- using a suitable fire-safe battery workflow and inspecting packs before use;
+- checking local aviation, radio, privacy, and public-safety rules;
+- testing only in a clear area with an appropriate recovery and emergency plan;
+- stopping immediately after a hard impact, propeller strike, failsafe, loss of control, or abnormal motor temperature;
+- verifying every firmware, ESC, motor, propeller, and battery setting on the actual aircraft.
+
+This project is not intended for military, weapon, armed, or combat applications. No project file is a safety certification, airworthiness approval, or performance guarantee.
+
+## Known limitations
+
+- The repository does not provide a universal BOM, validated print profile for every printer/material, or a certified structural analysis.
+- STL and 3MF files are manufacturing artifacts; they are not a substitute for editable source CAD or dimensional inspection.
+- A reference Betaflight configuration may contain hardware-specific assumptions and must be audited before use.
+- Published flight results are revision-dependent and are not directly comparable unless mass, battery, propeller, firmware, weather, and test method are matched.
+- Some files are explicitly outside the open-source release. Commercial rights require separate written permission.
+
+## Contributing and discussion
+
+Issues and pull requests are welcome. A useful report includes the commit or revision, airframe mass, material and print settings, motor/propeller/battery combination, firmware, test conditions, log evidence, and the smallest reproducible change.
+
+Please do not upload GitHub tokens, receiver identifiers, private flight data, personal addresses, or other credentials. For large binary revisions, explain the change in an issue or pull request before adding files.
+
+If POKRION helps your research or build, a voluntary **Star** makes the project easier for other builders to discover. Sharing a specific build result or a reproducible failure is even more valuable:
+
+<https://github.com/pokrc/POKRION-Speed-Drone>
+
+## Team and attribution
+
+Developed by the **POK-RC team**:
+
+- Yao Siqi
+- Guo Jiyuan
 - Zhang Wei
 
+Some early structural concepts were informed by publicly shared work from Sunny (PROWESS V1.2). POKRION includes substantial redesign and implementation changes, including revised structural layouts, internal routing, aerodynamic parts, and motor-mount integration.
 
----
+When redistributing or modifying this work, retain the attribution and license terms in [`LICENSE.txt`](LICENSE.txt), identify changes, and credit the POK-RC team as the original developer.
 
-# Open Source Scope
+## License
 
-The following parts of the project are released as open source:
+Unless a file states otherwise, this project is released under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](LICENSE.txt). You may study, share, and adapt the material for research, education, and personal non-commercial experimentation when you provide attribution and share derivatives under the same license. Commercial use requires separate written permission from the copyright holder.
 
-- Airframe structural design  
-- External shell and aerodynamic fairing STL files  
-- Open-source version two-blade propeller
-
-
----
-
-# Not Included in the Open Source Release
-
-The following components are **not part of the open source release**:
-
-- POKRION propellers (3–7 blade versions)  
-- Wind-cooled launch stand  
-- Any files not explicitly marked as open source in this repository
-
-
----
-
-# Hardware Configuration
-
-Typical configuration used during testing:
-
-- Battery: 6S 650mAh LiPo  
-- Flight Controller: SpeedyBee F405 AIO  
-- Motor: Amax 1507 3000KV  
-- Video System: DJI O4 Air Unit  
-- GPS: BZ-121 GPS
-
-
----
-
-# Build Overview
-
-Main components included in this repository:
-
-- 3D printed structural parts  
-- aerodynamic fairings  
-- propeller models  
-- carbon fiber frame design  
-- CNC motor mount design
-
-Users may manufacture these parts using 3D printing, CNC machining, or other suitable fabrication methods.
-
-
----
-
-# Safety Notice
-
-This project describes an experimental high-speed UAV platform.
-
-Building and operating high-speed drones involves potential risks, including but not limited to:
-
-- personal injury  
-- property damage  
-- equipment damage  
-- legal or regulatory risks
-
-All users are responsible for their own actions when building, testing, or flying the aircraft.
-
-The authors and contributors assume **no responsibility** for any direct or indirect consequences resulting from the use of this project.
-
-
----
-
-# Usage Restrictions
-
-This project and its derivative designs **must NOT be used for**:
-
-- military purposes  
-- weapon systems  
-- armed or combat-related applications
-
-
----
-
-# License
-
-This project is released under the **Creative Commons CC BY-NC-SA 4.0 License**.
-
-You may:
-
-- study the design  
-- modify the files  
-- use the project for research or personal learning
-
-You may NOT:
-
-- use the project for commercial activities  
-- sell products based on this design  
-- use the design for commercial promotion
-
-All derivative works must follow the same CC BY-NC-SA 4.0 license.
-
-
----
-
-# Acknowledgment
-
-Some early structural concepts were inspired by open designs shared by Sunny (PROWESS V1.2).
-
-The POK-RC team redesigned the structure and implemented significant modifications, including:
-
-- redesigned carbon fiber airframe  
-- integrated internal cable routing  
-- CNC motor mount system  
-- optimized aerodynamic shell  
+Copyright © 2026 POK-RC Team (POK_RC YAO). All rights reserved except for the rights expressly granted by the license.
