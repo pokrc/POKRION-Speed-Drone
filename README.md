@@ -16,7 +16,7 @@ This repository is intended to make the design easier to inspect, reproduce, dis
 - **Understand the platform:** read the [reference hardware](#reference-hardware-configuration), [repository map](#repository-map), and [build workflow](#build-workflow).
 - **Inspect printable parts:** open the [`3d_printed_parts/`](3d_printed_parts/) directory and compare the STL/3MF revision with your intended printer and material.
 - **Review the flight stack:** read [`betaflight_config.txt`](betaflight_config.txt) as a reference only, then make your own backup with `diff all` before changing a controller.
-- **Analyze a flight:** use the companion [Tune Betaflight PID from Blackbox Logs](https://github.com/pokrc/tune-betaflight-pid) project with a `.bbl` log. Its adaptive workflow selects a conservative evidence-gated CLI stage instead of forcing a PID change for every flight.
+- **Analyze a flight:** use the companion [Tune Betaflight PID from Blackbox Logs](https://github.com/pokrc/tune-betaflight-pid) project with a raw `.bbl` log. Its local readiness check verifies the decoder and dependencies before its adaptive workflow selects a conservative evidence-gated CLI stage instead of forcing a PID change for every flight.
 - **Join the project:** report a reproducible result in [Issues](https://github.com/pokrc/POKRION-Speed-Drone/issues) or propose a documented change in a pull request.
 
 ## Why POKRION
@@ -81,7 +81,7 @@ For a structured Blackbox workflow, see the companion project:
 
 **[Tune Betaflight PID from Blackbox Logs](https://github.com/pokrc/tune-betaflight-pid)**
 
-It analyzes `.bbl` logs, checks quality gates, compares matched flight windows, verifies RPM evidence, and selects an adaptive CLI stage: hold, RPM validation/setup, retain, TPA-only, or bounded noise reduction. Use it together with a saved `diff all` backup and short test flights. A generated CLI is a reviewable candidate, not permission to skip mechanical inspection or temperature checks.
+It analyzes `.bbl` logs locally, checks quality gates, compares matched flight windows, verifies RPM evidence, and selects an adaptive CLI stage: hold, RPM validation/setup, retain, TPA-only, or bounded noise reduction. Use its `doctor.py` readiness check before the first local deployment, then keep the `.bbl`, saved `diff all`, generated `analysis.json`, and motor-temperature result together as one test record. A generated CLI is a reviewable candidate, not permission to skip mechanical inspection or temperature checks.
 
 ## Safety and responsible use
 
