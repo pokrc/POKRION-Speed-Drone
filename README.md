@@ -81,7 +81,7 @@ For a structured Blackbox workflow, see the companion project:
 
 **[Tune Betaflight PID from Blackbox Logs](https://github.com/pokrc/tune-betaflight-pid)**
 
-It analyzes `.bbl` logs locally, checks quality gates, compares matched flight windows, verifies RPM evidence, and selects an adaptive CLI stage: hold, RPM validation/setup, retain, TPA-only, or bounded noise reduction. Use its `doctor.py` readiness check before the first local deployment, then keep the `.bbl`, saved `diff all`, generated `analysis.json`, and motor-temperature result together as one test record. A generated CLI is a reviewable candidate, not permission to skip mechanical inspection or temperature checks.
+It analyzes `.bbl` logs locally, checks quality gates, compares matched flight windows, verifies RPM evidence, and selects an adaptive CLI stage: hold, RPM validation/setup, retain, TPA-only, or bounded noise reduction. Use its `doctor.py` readiness check before the first local deployment, then keep the `.bbl`, saved `diff all`, generated `analysis.json`, and motor-temperature result together as one test record. RPM setup requires ESC bidirectional-DShot confirmation and the actual magnet count on the motor bell; never infer it from a previous configuration. A generated CLI is a reviewable candidate, not permission to skip mechanical inspection or temperature checks.
 
 ## Safety and responsible use
 
