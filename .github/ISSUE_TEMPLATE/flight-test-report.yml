@@ -1,0 +1,50 @@
+name: Reproducible build or flight-test report
+description: Share a tested result, a revision-specific issue, or an improvement proposal.
+title: "[Test report]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for documenting your result. Do not upload tokens, receiver identifiers, GPS coordinates, private addresses, or private video links.
+  - type: input
+    id: revision
+    attributes:
+      label: Repository revision and printed-part revision
+      placeholder: "Commit/tag, filenames, printer/material/profile"
+    validations:
+      required: true
+  - type: input
+    id: configuration
+    attributes:
+      label: Airframe and propulsion configuration
+      placeholder: "Mass, motors, propellers, battery, firmware, ESC protocol"
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Report category
+      options:
+        - Build fit, CAD, or manufacturing
+        - Structural or thermal observation
+        - Flight behavior or Blackbox result
+        - Documentation improvement
+        - Reproducible issue
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Test conditions and result
+      description: State what changed, test environment, measurements, incident information, and the smallest reproducible observation.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety checklist
+      options:
+        - label: I removed sensitive information and did not share credentials or private location data.
+          required: true
+        - label: I understand that published designs and settings require independent inspection and controlled testing.
+          required: true

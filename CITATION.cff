@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use POKRION in research, a build report, or published work, please cite this repository."
+title: "POKRION: High-Speed Micro Quadcopter Platform"
+type: software
+authors:
+  - family-names: Yao
+    given-names: Siqi
+  - family-names: Guo
+    given-names: Jiyuan
+  - family-names: Zhang
+    given-names: Wei
+license: CC-BY-NC-SA-4.0
+repository-code: "https://github.com/pokrc/POKRION-Speed-Drone"
+url: "https://github.com/pokrc/POKRION-Speed-Drone"
+keywords:
+  - fpv
+  - high-speed-drone
+  - micro-quadcopter
+  - open-hardware
+  - blackbox

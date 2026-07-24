@@ -1,5 +1,14 @@
 # POKRION — High-Speed Micro Quadcopter Platform
 
+<p align="center">
+  <img src="assets/pokrion-social-preview.svg" alt="POKRION high-speed micro quadcopter platform workflow" width="100%">
+</p>
+
+<p align="center">
+  <strong>Open airframe references and a reproducible Blackbox flight-test workflow for high-speed micro-quadcopter research.</strong><br>
+  If this platform makes a build or test easier to reproduce, <a href="https://github.com/pokrc/POKRION-Speed-Drone/stargazers">Star it</a> to keep open high-speed micro-drone work discoverable.
+</p>
+
 [![GitHub stars](https://img.shields.io/github/stars/pokrc/POKRION-Speed-Drone?style=social)](https://github.com/pokrc/POKRION-Speed-Drone/stargazers)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue)](LICENSE.txt)
 [![CAD and manufacturing files](https://img.shields.io/badge/CAD-STL%20%2B%203MF-orange)](3d_printed_parts/)
@@ -10,6 +19,14 @@
 This repository is intended to make the design easier to inspect, reproduce, discuss, and improve. It is an engineering reference—not a certified aircraft, a universal build recipe, or a guarantee of speed, flight time, or structural safety.
 
 > **Current status:** active experimental development. Dimensions, materials, propellers, electronics, and flight-control settings may change between revisions. Always inspect the files and configuration before manufacturing or flight testing.
+
+## Project at a glance
+
+| Focus | What is published | How to use it responsibly |
+| --- | --- | --- |
+| High-speed micro quadcopter R&D | Printable airframe parts, selected propeller models, frame/mount references, and a flight-controller reference configuration | Start from the named revision; inspect clearances, structural condition, and electrical compatibility before power-up |
+| Repeatable flight testing | Blackbox-aware workflow, configuration backup guidance, and a companion local analysis skill | Change one parameter family at a time, retain the `.bbl` and `diff all`, then record motor-temperature results |
+| Open engineering exchange | Issues, Discussions, reproducible test reports, and citation metadata | Share observations with hardware revision, mass, material, propeller, battery, firmware, and test conditions |
 
 ## Start here
 
@@ -106,7 +123,7 @@ This project is not intended for military, weapon, armed, or combat applications
 
 ## Contributing and discussion
 
-Issues and pull requests are welcome. A useful report includes the commit or revision, airframe mass, material and print settings, motor/propeller/battery combination, firmware, test conditions, log evidence, and the smallest reproducible change.
+Use [Discussions](https://github.com/pokrc/POKRION-Speed-Drone/discussions) for build questions, ideas, and test notes; use the structured issue form for a reproducible result or problem. A useful report includes the commit or revision, airframe mass, material and print settings, motor/propeller/battery combination, firmware, test conditions, log evidence, and the smallest reproducible change.
 
 Please do not upload GitHub tokens, receiver identifiers, private flight data, personal addresses, or other credentials. For large binary revisions, explain the change in an issue or pull request before adding files.
 

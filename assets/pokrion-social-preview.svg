@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">POKRION high-speed micro quadcopter platform</title>
+  <desc id="desc">A stylized technical illustration of a compact quadcopter and its open flight-test workflow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#160d11"/>
+      <stop offset=".52" stop-color="#32151b"/>
+      <stop offset="1" stop-color="#071a23"/>
+    </linearGradient>
+    <linearGradient id="hot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffbb2e"/>
+      <stop offset=".55" stop-color="#ff6b43"/>
+      <stop offset="1" stop-color="#e8327c"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffddd0" stroke-opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+  <path d="M50 520 C250 430 320 630 520 500 S800 420 1230 180" fill="none" stroke="url(#hot)" stroke-width="13" stroke-linecap="round" opacity=".5"/>
+  <path d="M60 575 C340 470 510 670 730 530 S970 430 1260 290" fill="none" stroke="#00c8d5" stroke-width="3" opacity=".5"/>
+
+  <text x="78" y="102" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="77" font-weight="800" letter-spacing="2">POKRION</text>
+  <rect x="80" y="124" width="585" height="5" rx="2.5" fill="url(#hot)"/>
+  <text x="80" y="172" fill="#ffd8bd" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" letter-spacing="1">HIGH-SPEED MICRO QUADCOPTER PLATFORM</text>
+  <text x="80" y="212" fill="#c3a9ad" font-family="Arial, Helvetica, sans-serif" font-size="20">Open airframe · FDM parts · Blackbox flight-test workflow</text>
+
+  <g transform="translate(805 109)">
+    <circle cx="115" cy="115" r="103" fill="none" stroke="#ffb431" stroke-width="11" opacity=".86"/>
+    <circle cx="360" cy="115" r="103" fill="none" stroke="#ff6e4d" stroke-width="11" opacity=".86"/>
+    <circle cx="115" cy="360" r="103" fill="none" stroke="#04ced8" stroke-width="11" opacity=".86"/>
+    <circle cx="360" cy="360" r="103" fill="none" stroke="#e93b82" stroke-width="11" opacity=".86"/>
+    <path d="M155 155L320 320M320 155L155 320" stroke="#eafff9" stroke-width="25" stroke-linecap="round"/>
+    <path d="M192 192L284 192L316 237L284 284L192 284L160 237Z" fill="#18303a" stroke="#f5ffff" stroke-width="7"/>
+    <path d="M216 212H260V261H216Z" fill="url(#hot)" opacity=".9"/>
+    <circle cx="115" cy="115" r="21" fill="#eafff9"/>
+    <circle cx="360" cy="115" r="21" fill="#eafff9"/>
+    <circle cx="115" cy="360" r="21" fill="#eafff9"/>
+    <circle cx="360" cy="360" r="21" fill="#eafff9"/>
+  </g>
+
+  <g transform="translate(80 371)">
+    <rect width="545" height="172" rx="20" fill="#090f18" fill-opacity=".72" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="29" y="43" fill="#f7ffff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">BUILD · TEST · DOCUMENT</text>
+    <text x="29" y="82" fill="#ffbe55" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700">01</text>
+    <text x="79" y="82" fill="#d9e4e5" font-family="Arial, Helvetica, sans-serif" font-size="18">Inspect the CAD and print revision</text>
+    <text x="29" y="115" fill="#ff7351" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700">02</text>
+    <text x="79" y="115" fill="#d9e4e5" font-family="Arial, Helvetica, sans-serif" font-size="18">Run controlled flight tests and logs</text>
+    <text x="29" y="148" fill="#22dbe1" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700">03</text>
+    <text x="79" y="148" fill="#d9e4e5" font-family="Arial, Helvetica, sans-serif" font-size="18">Share reproducible results and revisions</text>
+  </g>
+</svg>
