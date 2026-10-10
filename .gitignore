@@ -1,0 +1,19 @@
+# Local OS/editor and temporary files (keep CAD/manufacturing assets tracked)
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Local environments and generated Python caches
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
+# Do not accidentally commit private local configuration
+.env
+.env.*
+!.env.example
