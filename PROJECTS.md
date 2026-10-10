@@ -16,9 +16,9 @@ Updated: 2026-10-10. This index describes repositories owned by [@pokrc](https:/
 | --- | --- | --- |
 | [awards](https://github.com/pokrc/awards) | [TheJustinSunPrize/awards](https://github.com/TheJustinSunPrize/awards) | Working fork of the official prize catalog; official rules and decisions remain with the upstream maintainers |
 | [C9M3mini](https://github.com/pokrc/C9M3mini) | [Pumpkin173/C9M3mini](https://github.com/Pumpkin173/C9M3mini) | Camera application / hardware reference fork; keep upstream attribution |
-| [Hasselblad-X-System-CIM-Firmware-Research-Feature-Extensions](https://github.com/pokrc/Hasselblad-X-System-CIM-Firmware-Research-Feature-Extensions) | [derrickyau9/original](https://github.com/derrickyau9/Hasselblad-X-System-CIM-Firmware-Research-Feature-Extensions) | Firmware research reference, not a tested consumer firmware release |
-| [Hasselblad-X-System-QEMU-DevKit](https://github.com/pokrc/Hasselblad-X-System-QEMU-DevKit) | [derrickyau9/original](https://github.com/derrickyau9/Hasselblad-X-System-QEMU-DevKit) | Offline UI experimentation / development workbench; does not establish physical-camera functionality |
-| [x2d-907-one-click-extension-toolkit](https://github.com/pokrc/x2d-907-one-click-extension-toolkit) | [jkl987/original](https://github.com/jkl987/x2d-907-one-click-extension-toolkit) | Existing extension-toolkit code fork; read its own compatibility, verification and risk documentation before device operations |
+| [Hasselblad-X-System-CIM-Firmware-Research-Feature-Extensions](https://github.com/pokrc/Hasselblad-X-System-CIM-Firmware-Research-Feature-Extensions) | [derrickyau9/CIM Firmware Research](https://github.com/derrickyau9/Hasselblad-X-System-CIM-Firmware-Research-Feature-Extensions) | Firmware research reference, not a tested consumer firmware release |
+| [Hasselblad-X-System-QEMU-DevKit](https://github.com/pokrc/Hasselblad-X-System-QEMU-DevKit) | [derrickyau9/QEMU DevKit](https://github.com/derrickyau9/Hasselblad-X-System-QEMU-DevKit) | Offline UI experimentation / development workbench; does not establish physical-camera functionality |
+| [x2d-907-one-click-extension-toolkit](https://github.com/pokrc/x2d-907-one-click-extension-toolkit) | [jkl987/x2d-907 Toolkit](https://github.com/jkl987/x2d-907-one-click-extension-toolkit) | Existing extension-toolkit code fork; read its own compatibility, verification and risk documentation before device operations |
 
 ## Navigation by goal | 按目标查找
 
