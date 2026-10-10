@@ -20,6 +20,8 @@ This repository is intended to make the design easier to inspect, reproduce, dis
 
 > **Current status:** active experimental development. Dimensions, materials, propellers, electronics, and flight-control settings may change between revisions. Always inspect the files and configuration before manufacturing or flight testing.
 
+**POKRC project directory:** [All 8 repositories — originals, forks, and research boundaries](PROJECTS.md). This page is the cross-project navigation hub; this README documents POKRION itself.
+
 ## Project at a glance
 
 | Focus | What is published | How to use it responsibly |
